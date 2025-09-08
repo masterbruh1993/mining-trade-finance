@@ -1,0 +1,199 @@
+.captcha-container {
+  background: rgba(17, 17, 17, 0.95);
+  border: 1px solid rgba(0, 255, 153, 0.3);
+  border-radius: 8px;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 255, 153, 0.1);
+}
+
+.captcha-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  color: #00ff99;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.refresh-btn {
+  background: none;
+  border: none;
+  color: #00ff99;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.2rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.refresh-btn:hover {
+  color: #ffffff;
+  background-color: rgba(0, 255, 153, 0.15);
+  transform: rotate(180deg);
+}
+
+.captcha-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.captcha-question {
+  text-align: center;
+  padding: 0.5rem;
+  background: rgba(0, 255, 153, 0.1);
+  border-radius: 15px;
+  border: 1px solid rgba(0, 255, 153, 0.3);
+}
+
+.math-expression {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #00ff99;
+  font-family: 'Courier New', monospace;
+  text-shadow: 0 0 8px rgba(0, 255, 153, 0.4);
+  letter-spacing: 1px;
+}
+
+.captcha-input-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.captcha-input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  background: #111111;
+  border: 2px solid rgba(0, 255, 153, 0.3);
+  border-radius: 9999px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 80px;
+  height: 45px;
+  box-sizing: border-box;
+}
+
+.captcha-input:focus {
+  outline: none;
+  border-color: #00ff99;
+  box-shadow: 0 0 12px rgba(0, 255, 153, 0.4), inset 0 0 8px rgba(0, 255, 153, 0.1);
+  background-color: rgba(0, 255, 153, 0.05);
+  transform: scale(1.02);
+}
+
+.captcha-input::placeholder {
+  color: #888888;
+}
+
+.captcha-verify-btn {
+  padding: 0.6rem 1rem;
+  background: linear-gradient(135deg, #00ff99 0%, #00cc66 100%);
+  border: none;
+  border-radius: 9999px;
+  color: #000000;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  height: 45px;
+  box-sizing: border-box;
+}
+
+.captcha-verify-btn:hover {
+  background: linear-gradient(135deg, #00ffff 0%, #00ff99 100%);
+  box-shadow: 0 0 15px rgba(0, 255, 153, 0.5), 0 0 25px rgba(0, 255, 255, 0.3);
+  transform: translateY(-1px) scale(1.02);
+}
+
+.captcha-verify-btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 0 8px rgba(0, 255, 153, 0.4);
+  background: linear-gradient(135deg, #00cc66 0%, #00cccc 100%);
+}
+
+.captcha-error {
+  color: #ff6b6b;
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 0.3rem;
+  background: rgba(255, 107, 107, 0.1);
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.captcha-container.verified {
+  background: rgba(0, 255, 153, 0.1);
+  border-color: #00ff99;
+}
+
+.captcha-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #00ff99;
+  font-weight: 600;
+  padding: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+}
+
+.checkmark {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .captcha-container {
+    padding: 0.6rem;
+    margin: 0.6rem 0;
+  }
+  
+  .captcha-input-group {
+    flex-direction: row;
+    gap: 0.4rem;
+  }
+  
+  .captcha-input {
+    min-width: 60px;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .captcha-verify-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.75rem;
+  }
+  
+  .captcha-question {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .math-expression {
+    font-size: 1rem;
+  }
+  
+  .captcha-header {
+    font-size: 0.75rem;
+  }
+  
+  .refresh-btn {
+    font-size: 0.8rem;
+  }
+}

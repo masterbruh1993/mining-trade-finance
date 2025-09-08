@@ -1,0 +1,250 @@
+.settings-container {
+  background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #e2e8f0;
+}
+
+.settings-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.settings-header h1 {
+  background: linear-gradient(135deg, #00d4ff 0%, #9333ea 50%, #00ff88 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+}
+
+.settings-header p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.settings-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Profile Card Styles */
+.profile-card {
+  padding: 30px;
+}
+
+.profile-card h2 {
+  color: #e2e8f0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, #00d4ff 0%, #9333ea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #cbd5e1;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: #e2e8f0;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #00d4ff;
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1), 0 0 20px rgba(0, 212, 255, 0.2);
+  background: rgba(30, 41, 59, 0.9);
+}
+
+.form-group input::placeholder {
+  color: #64748b;
+}
+
+.update-btn {
+  background: linear-gradient(135deg, #00d4ff 0%, #9333ea 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 28px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.update-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.update-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+}
+
+.update-btn:hover:not(:disabled)::before {
+  left: 100%;
+}
+
+.update-btn:disabled {
+  background: rgba(100, 116, 139, 0.5);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Account Info Card Styles */
+.account-info-card {
+  padding: 30px;
+  height: fit-content;
+}
+
+.account-info-card h2 {
+  color: #e2e8f0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  transition: all 0.3s ease;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item:hover {
+  background: rgba(0, 212, 255, 0.05);
+  margin: 0 -15px;
+  padding: 16px 15px;
+  border-radius: 8px;
+}
+
+.info-item .label {
+  color: #94a3b8;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.info-item .value {
+  color: #e2e8f0;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Message Box Styles */
+.message-box {
+  margin: 10px 0;
+}
+
+/* Loading State */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 1.2rem;
+  color: #94a3b8;
+  background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 15px;
+  }
+  
+  .settings-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .settings-header h1 {
+    font-size: 2rem;
+  }
+  
+  .profile-card,
+  .account-info-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-container {
+    padding: 10px;
+  }
+  
+  .settings-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .profile-card h2,
+  .account-info-card h2 {
+    font-size: 1.5rem;
+  }
+  
+  .form-group input {
+    padding: 12px 14px;
+  }
+  
+  .update-btn {
+    padding: 12px 24px;
+  }
+}

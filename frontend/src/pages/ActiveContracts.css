@@ -1,0 +1,296 @@
+.active-contracts {
+  padding: 20px;
+  background: #0a0a0a;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.page-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.page-header h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.page-header p {
+  color: #b0b0b0;
+  font-size: 1.1rem;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #b0b0b0;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+.no-contracts {
+  text-align: center;
+  padding: 60px 40px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+}
+
+.no-contracts-content h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.no-contracts-content p {
+  color: #b0b0b0;
+  font-size: 1rem;
+}
+
+.contracts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.contract-card {
+  background: var(--luxury-card-bg);
+  border: 1px solid transparent;
+  border-image: var(--gold-gradient-border) 1;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.contract-card:hover {
+  transform: scale(1.02);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.contract-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+.contract-amount {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--luxury-gold);
+  text-shadow: var(--text-shadow-gold);
+  font-family: var(--font-primary);
+}
+
+.contract-status {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  background: var(--fintech-green);
+  color: var(--luxury-black);
+}
+
+.contract-details {
+  margin-bottom: 1.5rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.detail-row .label {
+  color: var(--fintech-gray-light);
+  font-weight: 400;
+}
+
+.detail-row .value {
+  color: var(--fintech-white);
+  font-weight: 600;
+}
+
+.detail-row .value.gold {
+  color: var(--luxury-gold);
+  font-weight: 700;
+  text-shadow: var(--text-shadow-gold);
+}
+
+.progress-section {
+  margin-bottom: 1.5rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--fintech-gray-light);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: var(--fintech-gray-dark);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #0D0D0D;
+  transition: width 0.3s ease;
+}
+
+.expected-return {
+  background: rgba(255, 215, 0, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.return-header {
+  font-size: 0.75rem;
+  color: var(--fintech-gray-light);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.return-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--luxury-gold);
+  text-shadow: var(--text-shadow-gold);
+  font-family: var(--font-primary);
+  margin-bottom: 0.5rem;
+}
+
+.return-breakdown {
+  font-size: 0.85rem;
+  color: #b0b0b0;
+  font-weight: 500;
+}
+
+.maturity-notice {
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+.maturity-header {
+  font-size: 0.9rem;
+  color: var(--luxury-gold-medium);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: var(--gold-glow-subtle);
+}
+
+.maturity-amount {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--luxury-gold-light);
+  margin-bottom: 5px;
+  text-shadow: var(--gold-glow);
+}
+
+.maturity-text {
+  font-size: 0.9rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Removed old payout schedule styles - replaced with expected return and maturity notice */
+
+.contracts-summary {
+  margin-top: 40px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .active-contracts {
+    padding: 15px;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .contracts-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .contract-card {
+    padding: 20px;
+  }
+  
+  .contract-amount {
+    font-size: 1.5rem;
+  }
+  
+  .summary-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contract-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .progress-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .schedule-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
