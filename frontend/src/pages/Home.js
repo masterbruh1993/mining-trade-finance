@@ -28,21 +28,23 @@ const Home = () => {
             with our 15-day investment plans offering competitive returns.
           </p>
           
-          <div className="hero-actions">
-            {isAuthenticated ? (
-              <Link to="/dashboard" className="btn btn-primary btn-large">
-                Go to Dashboard
-              </Link>
-            ) : (
-              <>
-                <Link to="/register" className="btn btn-primary btn-large">
-                  Get Started
+          <div className="login-section">
+            <div className="hero-actions">
+              {isAuthenticated ? (
+                <Link to="/dashboard" className="btn btn-primary btn-large">
+                  Go to Dashboard
                 </Link>
-                <Link to="/login" className="btn btn-secondary btn-large">
-                  Sign In
-                </Link>
-              </>
-            )}
+              ) : (
+                <>
+                  <Link to="/register" className="btn btn-primary btn-large">
+                    Get Started
+                  </Link>
+                  <Link to="/login" className="btn btn-secondary btn-large">
+                    Sign In
+                  </Link>
+                </>
+              )}
+            </div>
           </div>
         </div>
         
